@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>기관장 청렴 순시 의견 수렴</title>
+ <style>
+기관장 순시 및 간담회 후속 조치를 위한 맞춤형 웹페이지 구축
+1.
+2.
+3.
+Made with Xodo PDF Reader and Editor
+ :root { --primary: #003366; --bg: #f8f9fa; }
+ body { font-family: 'Pretendard', sans-serif; background: var(--bg);
+margin: 0; padding: 20px; display: flex; justify-content: center; }
+ .box { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0
+10px 25px rgba(0,0,0,0.05); width: 100%; max-width: 500px; }
+ .header-title { border-bottom: 2px solid var(--primary); padding-bottom:
+15px; margin-bottom: 25px; text-align: center; }
+ h2 { color: var(--primary); margin: 0; font-size: 22px; }
+ .form-item { margin-bottom: 20px; }
+ label { display: block; margin-bottom: 8px; font-weight: 600; color:
+#333; }
+ select, textarea { width: 100%; padding: 12px; border: 1px solid #ddd;
+border-radius: 6px; font-size: 15px; }
+ .secure-badge { background: #e7f3ff; color: #0066cc; padding: 10px;
+border-radius: 6px; font-size: 13px; margin-bottom: 25px; text-align: center; }
+ button { width: 100%; padding: 15px; background: var(--primary); color:
+#fff; border: none; border-radius: 6px; font-size: 16px; font-weight: bold;
+cursor: pointer; transition: 0.3s; }
+ button:hover { background: #002244; }
+ </style>
+</head>
+<body>
+ <div class="box">
+ <div class="header-title"><h2>현장 의견 수렴 소통함</h2></div>
+ <div class="secure-badge"> 본 채널은 IP를 수집하지 않으며, 철저히 익명으로 운영됩니
+다.</div>
+ <!-- 아래 ACTION 주소의 FORM_ID를 실제 구글 폼 ID로 교체하세요 -->
+ <form id="opForm" action="https://docs.google.com/forms/d/e/[FORM_ID]/
+formResponse" method="POST" target="hidden_iframe">
+ <div class="form-item">
+ <label>의견 분류</label>
+ <select name="entry.[숫자ID_1]">
+ <option>조직문화 개선</option>
+ <option>청렴·윤리 경영</option>
+ <option>인권 경영</option>
+ <option>현장 근무환경</option>
+ </select>
+ </div>
+ <div class="form-item">
+ <label>의견 내용</label>
+ <textarea name="entry.[숫자ID_2]" rows="6" placeholder="간담회에서 못다
+한 이야기를 자유롭게 남겨주세요." required></textarea>
+ </div>
+ <button type="submit" onclick="submitted=true">의견 안전하게 제출하기</
+button>
+ </form>
+ </div>
+ <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"
+onload="if(typeof submitted !== 'undefined') { alert('의견이 성공적으로 전달되었습니다.');
+location.reload(); }"></iframe>
+Made with Xodo PDF Reader and Editor
+</body>
+</html>
